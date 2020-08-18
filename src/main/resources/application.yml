@@ -1,0 +1,15 @@
+server:
+  port: 8010
+#不启用安全措施会不安全，可以用starter-security依赖，然后用随机生成的密码
+management:
+  security:
+    enabled: false
+#info端点，用于actuator监控
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    parent: @parent@
+    java:
+      source: @java.version@
+      target: @java.version@
